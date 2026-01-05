@@ -5,12 +5,12 @@ description: Fetch a webpage and return its content as clean markdown. Use when 
 
 # Fetch URL
 
-Fetches a webpage and extracts the main readable content as clean markdown. Uses Mozilla Readability (same as Firefox Reader View) to extract content, then Turndown for markdown conversion.
+Fetches a webpage and extracts the main content as clean markdown. Uses Bun's HTMLRewriter to strip junk (scripts, nav, ads, etc.) and Turndown for markdown conversion.
 
 ## How to Use
 
 ```bash
-bun ~/.claude/skills/fetch-url/scripts/fetch.ts "https://example.com"
+~/.claude/skills/fetch-url/scripts/fetch.ts "https://example.com"
 ```
 
 ## When to Use
@@ -23,9 +23,9 @@ bun ~/.claude/skills/fetch-url/scripts/fetch.ts "https://example.com"
 ## Examples
 
 ```bash
-bun ~/.claude/skills/fetch-url/scripts/fetch.ts "https://developer.apple.com/documentation/foundationmodels"
-bun ~/.claude/skills/fetch-url/scripts/fetch.ts "https://anthropic.com/engineering/building-agents-with-the-claude-agent-sdk"
-bun ~/.claude/skills/fetch-url/scripts/fetch.ts "https://en.wikipedia.org/wiki/Swift_(programming_language)"
+~/.claude/skills/fetch-url/scripts/fetch.ts "https://developer.apple.com/documentation/foundationmodels"
+~/.claude/skills/fetch-url/scripts/fetch.ts "https://anthropic.com/engineering/building-agents-with-the-claude-agent-sdk"
+~/.claude/skills/fetch-url/scripts/fetch.ts "https://en.wikipedia.org/wiki/Swift_(programming_language)"
 ```
 
 ## Output
@@ -35,10 +35,9 @@ Returns the page content as clean markdown with:
 - Headings preserved
 - Links converted to markdown format
 - Code blocks maintained
-- Metadata (title, author, excerpt) included
+- Metadata (title, author, description) included
 
 ## Tips
 
 - Works best on article/documentation pages
 - For dynamic JS-rendered pages, content may be limited
-- Uses the same algorithm as Firefox Reader View

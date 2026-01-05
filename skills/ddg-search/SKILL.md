@@ -10,7 +10,7 @@ Search the web using DuckDuckGo Lite. No API key needed, privacy-friendly, low c
 ## How to Use
 
 ```bash
-bun ~/.claude/skills/ddg-search/scripts/search.ts "your search query"
+~/.claude/skills/ddg-search/scripts/search.ts "your search query"
 ```
 
 ## When to Use
@@ -24,9 +24,9 @@ bun ~/.claude/skills/ddg-search/scripts/search.ts "your search query"
 ## Examples
 
 ```bash
-bun ~/.claude/skills/ddg-search/scripts/search.ts "latest Apple news January 2026"
-bun ~/.claude/skills/ddg-search/scripts/search.ts "macbook pro m4 price"
-bun ~/.claude/skills/ddg-search/scripts/search.ts "claude agent sdk documentation"
+~/.claude/skills/ddg-search/scripts/search.ts "latest Apple news January 2026"
+~/.claude/skills/ddg-search/scripts/search.ts "macbook pro m4 price"
+~/.claude/skills/ddg-search/scripts/search.ts "claude agent sdk documentation"
 ```
 
 ## Output
